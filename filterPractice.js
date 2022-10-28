@@ -74,3 +74,18 @@ let modWords2 = words1.filter((word, index, arr) => {
 console.log("modWords1", modWords1)
 console.log("modWords2", modWords2)
 console.log("words1", words1)
+//test on something noted as common issue
+//----'if (colderDays)' evaluates to truthy because an empty array is evaluated
+//----'if (colderDays.length)' evalutes to false (assumign there were no sub 20 days)
+//----becaues the length of an empty array ===0 aka falsy
+const weeklyReadings = [20, 22, 20.5, 30, 21, 21.5, 23]
+
+const colderDays = weeklyReadings.filter((dayTemperature) => {
+	return dayTemperature < 20
+})
+
+if (colderDays) {
+	console.log("Yes, there were colder days last week")
+} else {
+	console.log("No, there were no colder days")
+}
