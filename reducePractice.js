@@ -1,0 +1,8 @@
+some()
+every()
+includes()
+slice()
+splice()
+shift()
+unshift()
+fill()
